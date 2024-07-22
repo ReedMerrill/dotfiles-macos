@@ -4,6 +4,7 @@ return {
 		config = function()
 			-- Create a table with the options to be passed to setup()
 			local opts = {
+				pdfviewer = "/System/Applications/Preview.app/Contents/MacOS/Preview",
 				R_args = { "--quiet", "--no-save" },
 				hook = {
 					after_config = function()
