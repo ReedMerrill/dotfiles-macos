@@ -4,7 +4,7 @@ vim.g.mapleader = " "
 -- editor features
 vim.opt.nu = true
 vim.opt.relativenumber = true
-vim.opt.colorcolumn = "79"
+vim.opt.colorcolumn = "81"
 vim.opt.cursorline = true
 vim.opt.signcolumn = "yes"
 vim.opt.timeoutlen = 300
