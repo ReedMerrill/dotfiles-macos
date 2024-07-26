@@ -9,6 +9,12 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
+# make arguments to cd that aren't directories assumed to be a variable who's
+# value is a directory. Useful for "aliasing" directories
+setopt cdablevars
+# turn on dir switching without cd
+setopt autocd
+
 
 # zsh-autocomplete
 source "/usr/local/bin/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
@@ -25,11 +31,6 @@ source "/usr/local/bin/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
-
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
 # zstyle ':omz:update' frequency 13
@@ -50,12 +51,12 @@ source "/usr/local/bin/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
 # You can also set it to another string to have that shown instead of the default red dots.
 # e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -89,19 +90,11 @@ else
   export EDITOR='nvim'
 fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# turn off dir switching without cd
-unsetopt autocd
+# Add scripts dir to path
+export PATH="/Users/reed/Scripts:$PATH"
 
 ################################################################################
-# ALIASES
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
+# ALIASES & HASHES
 
 # Lazygit
 alias lg='lazygit'
@@ -121,10 +114,12 @@ alias R='R --no-save'
 alias nrm='sudo rm -r'
 alias ff='yazi'
 
-# Add scripts dir to path
-export PATH="/Users/reed/Scripts:$PATH"
+# annoying mandatory dropbox folder name on linked account
+alias db="cd /Users/reed/Can.\ Mun.\ Barometer\ Dropbox/Reed\ Merrill/"
+alias p="cd /Users/reed/projects"
 
-# Initializations
+################################################################################
+# INITIALIZATIONS
 
 # fnm - node.js envs
 #export PATH="/home/reed/.local/share/fnm:$PATH"
@@ -135,10 +130,9 @@ export PATH="/Users/reed/Scripts:$PATH"
 # enable auto env actions when leaving a dir
 #AUTOENV_ENABLE_LEAVE='allow'
 
-# environment variables
 # make sure neovim can be found
-# VISUAL='/usr/bin/nvim'
-# EDITOR='/usr/bin/nvim'
+VISUAL='/usr/bin/nvim'
+EDITOR='/usr/bin/nvim'
 
 # add my Scripts directory to PATH
 # export PATH="/user/reed/Scripts:$PATH"
