@@ -13,13 +13,8 @@ return {
 	},
 	-- "gc" to comment visual regions/lines
 	{ "numToStr/Comment.nvim", opts = {} },
-	-- tokyonight theme
-	{
-		"folke/tokyonight.nvim",
-		config = function()
-			vim.cmd("colorscheme tokyonight-night")
-		end,
-	},
+	-- theme
+	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	-- plenary
 	"nvim-lua/plenary.nvim",
 	-- harpoon
