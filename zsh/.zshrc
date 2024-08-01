@@ -98,25 +98,32 @@ export PATH="/Users/reed/Scripts:$PATH"
 
 # Lazygit
 alias lg='lazygit'
-# Make fd the standard command for fd
+# Make fd the standard command for fd (which has to be called fdfind due to conflicts)
 alias fd='fdfind'
+# listing (eza is an awesome ls replacement)
 alias l="eza -l --icons --git -a"
 alias lt="eza --tree --level=2 --long --icons --git"
 # [s]ource .zshrc
 alias so='source ~/.zshrc'
-# [n]eovim [d]ot[f]iles
-alias ndf='cd ~/dotfiles/nvim/.config/nvim/ && nvim .'
 # [g]it [s]tatus
 alias gs='git status'
 # make R not prompt to save workspace on exit
 alias R='R --no-save'
 # [n]uclear [r]e[m]ove
 alias nrm='sudo rm -r'
+# launch yazi
 alias ff='yazi'
+# clear
+alias cl='clear'
 
-# annoying mandatory dropbox folder name on linked account
+# Directory Navigation
+
+# fixing annoying mandatory [d]rop[b]ox folder name on linked account
 alias db="cd /Users/reed/Can.\ Mun.\ Barometer\ Dropbox/Reed\ Merrill/"
+# [p]rojects
 alias p="cd /Users/reed/projects"
+# [n]eovim [d]ot[f]iles
+alias ndf='cd ~/dotfiles/nvim/.config/nvim/ && nvim .'
 
 ################################################################################
 # INITIALIZATIONS
