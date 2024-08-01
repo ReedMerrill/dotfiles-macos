@@ -33,6 +33,9 @@ vim.keymap.set("x", "<leader>dp", [["_dP]])
 -- yank to the system register in visual and normal modes
 vim.keymap.set({ "n", "v", "x" }, "<leader>y", [["+y]])
 
+-- yank the entire file to the system register
+vim.api.nvim_set_keymap("n", "ya", ":%y+<CR>", { noremap = true, silent = true })
+
 -- make the file in buffer executable
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
