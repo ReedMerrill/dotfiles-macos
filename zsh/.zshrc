@@ -138,8 +138,8 @@ alias ndf='cd ~/dotfiles/nvim/.config/nvim/ && nvim .'
 #AUTOENV_ENABLE_LEAVE='allow'
 
 # make sure neovim can be found
-VISUAL='/usr/bin/nvim'
-EDITOR='/usr/bin/nvim'
+export VISUAL='/usr/bin/nvim'
+export EDITOR='/usr/bin/nvim'
 
 # add my Scripts directory to PATH
 # export PATH="/user/reed/Scripts:$PATH"
