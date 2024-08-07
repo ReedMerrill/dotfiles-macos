@@ -7,6 +7,6 @@ vim.opt.smartindent = true
 vim.opt.wrap = false
 
 -- pipe operator insertion
-vim.api.nvim_set_keymap("i", "<C-n>", " <- ", { noremap = true })
+vim.api.nvim_set_keymap("i", "<C-j>", " <- ", { noremap = true })
 -- assignment operator insertion
-vim.api.nvim_set_keymap("i", "<C-y>", " |>", { noremap = true })
+vim.api.nvim_set_keymap("i", "<C-k>", " |>", { noremap = true })
