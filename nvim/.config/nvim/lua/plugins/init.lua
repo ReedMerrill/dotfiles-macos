@@ -44,4 +44,7 @@ return {
 	"folke/trouble.nvim",
 	-- icons
 	"nvim-tree/nvim-web-devicons",
+	-- surround actions
+	{ "echasnovski/mini.surround", version = "*" },
+	{ "echasnovski/mini.ai", version = "*" },
 }
