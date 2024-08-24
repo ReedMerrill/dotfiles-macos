@@ -1,6 +1,9 @@
 -- set leader to " "
 vim.g.mapleader = " "
 
+-- conceallevel for obsidian.nvim
+vim.opt.conceallevel = 2
+
 -- editor features
 vim.opt.nu = true
 vim.opt.relativenumber = true
