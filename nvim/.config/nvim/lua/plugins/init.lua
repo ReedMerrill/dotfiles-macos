@@ -47,4 +47,12 @@ return {
 	-- surround actions
 	{ "echasnovski/mini.surround", version = "*" },
 	{ "echasnovski/mini.ai", version = "*" },
+	-- hardtime: motion efficiency tips
+	{
+		"m4xshen/hardtime.nvim",
+		dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+		opts = {
+			disabled_filetypes = { "lazy", "mason", "oil" },
+		},
+	},
 }
