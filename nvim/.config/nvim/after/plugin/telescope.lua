@@ -1,22 +1,16 @@
-local trouble = require("trouble.providers.telescope")
+local actions = require("telescope.actions")
+local open_with_trouble = require("trouble.sources.telescope").open
 
--- get ripgrep to stop ignoring hidden and gitignore files
-require("telescope").setup({
+-- Use this to add more results without clearing the trouble list
+local add_to_trouble = require("trouble.sources.telescope").add
+
+local telescope = require("telescope")
+
+telescope.setup({
 	defaults = {
-		vimgrep_arguments = {
-			"rg",
-			"--color=never",
-			"--no-heading",
-			"--with-filename",
-			"--line-number",
-			"--column",
-			"--smart-case",
-			"--hidden",
-		},
-		-- send results to trouble's quickfix list
 		mappings = {
-			i = { ["<c-l>"] = trouble.open_with_trouble },
-			n = { ["<c-l>"] = trouble.open_with_trouble },
+			i = { ["<c-t>"] = open_with_trouble },
+			n = { ["<c-t>"] = open_with_trouble },
 		},
 	},
 })
