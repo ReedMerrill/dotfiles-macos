@@ -7,3 +7,6 @@
 [submodule "zsh"]
 	path = zsh
 	url = git@github.com:ReedMerrill/zsh.git
+[submodule "yazi"]
+	path = yazi
+	url = git@github.com:ReedMerrill/yazi.git
