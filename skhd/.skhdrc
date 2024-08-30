@@ -1,14 +1,18 @@
 # open terminal
 cmd - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~ &> /dev/null
 
+# restart yabai
+cmd - e : yabai --resart-service
+
 # focus window
 cmd - x : yabai -m window --focus recent
 cmd - h : yabai -m window --focus west
 cmd - j : yabai -m window --focus south
 cmd - k : yabai -m window --focus north
 cmd - l : yabai -m window --focus east
-cmd - z : yabai -m window --focus stack.prev
-cmd - c : yabai -m window --focus stack.next
+cmd + alt - j : yabai -m window --focus stack.prev
+cmd + alt - k : yabai -m window --focus stack.next
+
 # swap window
 shift + alt - x : yabai -m window --swap recent
 shift + alt - h : yabai -m window --swap west
@@ -41,22 +45,23 @@ shift + alt - right  : yabai -m window --grid 1:2:1:0:1:1
 #                   yabai -m space --focus "${index}"
 
 # create desktop and follow focus - uses jq for parsing json (brew install jq)
-# cmd + alt - n : yabai -m space --create && \
-#                 index="$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')" && \
-#                 yabai -m space --focus "${index}"
+cmd + alt - n : yabai -m space --create && \
+                index="$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')" && \
+                yabai -m space --focus "${index}"
 
 # destroy desktop
 # cmd + alt - w : yabai -m space --destroy
 cmd + alt - w : yabai -m space --focus prev && yabai -m space recent --destroy
 
 # fast focus desktop
-cmd - x : yabai -m space --focus recent
-cmd - z : yabai -m space --focus prev || skhd -k "ctrl + alt + cmd - z"
-cmd - c : yabai -m space --focus next || skhd -k "ctrl + alt + cmd - c"
+# cmd - x : yabai -m space --focus recent
+# cmd - z : yabai -m space --focus prev || skhd -k "ctrl + alt + cmd - z"
+# cmd - c : yabai -m space --focus next || skhd -k "ctrl + alt + cmd - c"
 cmd - 7 : yabai -m space --focus  1 || skhd -k "ctrl + alt + cmd - 1"
 cmd - 8 : yabai -m space --focus  2 || skhd -k "ctrl + alt + cmd - 2"
 cmd - 9 : yabai -m space --focus  3 || skhd -k "ctrl + alt + cmd - 3"
 cmd - 0 : yabai -m space --focus  4 || skhd -k "ctrl + alt + cmd - 4"
+cmd - 6 : yabai -m space --focus  5 || skhd -k "ctrl + alt + cmd - 4"
 
 # send window to desktop and follow focus
 shift + cmd - x : yabai -m window --space recent && yabai -m space --focus recent
