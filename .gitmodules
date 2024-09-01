@@ -10,3 +10,6 @@
 [submodule "yazi"]
 	path = yazi
 	url = git@github.com:ReedMerrill/yazi.git
+[submodule "wezterm"]
+	path = wezterm
+	url = git@github.com:ReedMerrill/wezterm.git
