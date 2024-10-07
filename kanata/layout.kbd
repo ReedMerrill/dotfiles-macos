@@ -1,0 +1,46 @@
+(defcfg
+  process-unmapped-keys yes
+)
+
+(defalias 1 (layer-while-held 1))
+(defalias 2 (layer-while-held 2))
+
+(defsrc
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '         ret
+  lsft z    x    c    v    b    n    m    ,    .    /              rsft
+  fn lctl lmet lalt            spc           rmet  ralt
+)
+
+;; just put in the @nav alias and remap caps to esc
+
+(deflayer base
+  esc  🔅   🔆   ✗    ✗    ✗    ✗    ◀◀   ▶⏸   ▶▶   🔇   🔉   🔊
+  grv  _    _    _    _    _    _    _    _    _    _    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  esc  a    s    d    f    g    h    j    k    l    ;    '         ret
+  lsft z    x    c    v    b    n    m    ,    .    /              rsft
+  fn lctl lmet lalt            spc            @1    ralt
+)
+
+(deflayer 1
+  _   _    _    _    _    _    _    _    _    _    _    _    _
+  _   _    _    _    _    _    _    _    _    _    _    _    _    _
+  _   5    6    7    8    9    _    _    _    _    _    _    _    _
+ lrld 0    1    2    3    4    lft  down up   rght _    _         _
+ @2   _    _    _    _    _    _    _    _    _    _              _
+  _   _    _    _              _              _    _
+)
+  
+(deflayer 2
+  _   _    _    _    _    _    _    _    _    _    _    _    _
+  _   _    _    _    _    _    _    _    _    _    _    _    _    _
+  _   `   S-1  S-2  S-3  S-4  S-5  S-6  S-7  S-8   _    _    _    _
+  _  S-/  S-`   ,    .    +    =   S-9  S-0  S-'   '    _         _
+  _   _   S--   -    [    ]    _    _    ,    .    _              _
+  _   _    _    _              _              _    _
+)
+  
+

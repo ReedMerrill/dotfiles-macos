@@ -127,7 +127,7 @@ alt - a : yabai -m space --toggle padding --toggle gap
 alt - d : yabai -m window --toggle zoom-parent
 
 # toggle window fullscreen zoom
-cmd - f : yabai -m window --toggle zoom-fullscreen
+shift + cmd - f : yabai -m window --toggle zoom-fullscreen
 
 # toggle window native fullscreen
 # shift + alt - f : yabai -m window --toggle native-fullscreen
