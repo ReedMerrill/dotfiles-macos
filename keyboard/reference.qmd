@@ -1,0 +1,22 @@
+---
+title: "Keyboard Layout Reference"
+subtitle: "36 Keys"
+date: today
+format: pdf
+---
+
+## Base
+
+![base](base.png)
+
+## Navigation
+
+![nav](nav.png)
+
+## Media
+
+![media](media.png)
+
+## Numbers and Symbols
+
+![numbers](num.png)
