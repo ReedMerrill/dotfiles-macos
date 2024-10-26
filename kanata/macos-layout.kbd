@@ -15,7 +15,7 @@
 
 (defalias 
   nav (layer-while-held nav)
-  spc_nav (tap-hold 200 200 f @nav)
+  spc_nav (tap-hold 200 200 spc @nav)
 )
 
 (defsrc
