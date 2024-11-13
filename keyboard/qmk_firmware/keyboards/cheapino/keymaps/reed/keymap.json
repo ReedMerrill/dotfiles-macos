@@ -37,7 +37,7 @@
       "KC_COMM",
       "KC_DOT",
       "KC_SLSH",
-      "KC_ESC",
+      "LGUI_T(KC_ESC)",
       "LT(1,KC_SPC)",
       "LT(3,KC_TAB)",
       "LT(2,KC_ENT)",
