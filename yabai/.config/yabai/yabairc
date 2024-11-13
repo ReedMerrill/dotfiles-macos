@@ -5,7 +5,18 @@
 sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
+# mission-control desktop labels
+yabai -m space 1 --label scratch 
+yabai -m space 2 --label terminal 
+yabai -m space 3 --label mail
+yabai -m space 4 --label slack
+yabai -m space 5 --label notes
+
 # window rules
+yabai -m rule --add app="^Firefox$" space=scratch
+yabai -m rule --add app="^WezTerm$" space=terminal
+yabai -m rule --add app="^Outlook$" space=mail
+yabai -m rule --add app="^Slack$" space=slack
 yabai -m rule --add app="^(Calculator|System Preferences|Archive Utility)$" manage=off
 
 # signals
@@ -40,7 +51,7 @@ yabai -m config                              \
     left_padding                0            \
     right_padding               0            \
     bottom_padding              0            \
-    window_gap                  5            \
+    window_gap                  0            \
     layout                      bsp          \
     mouse_modifier              fn           \
     mouse_action1               move         \
