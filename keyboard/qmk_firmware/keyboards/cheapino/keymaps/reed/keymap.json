@@ -37,12 +37,12 @@
       "KC_COMM",
       "KC_DOT",
       "KC_SLSH",
-      "LGUI_T(KC_BSPC)",
+      "KC_ESC",
       "LT(1,KC_SPC)",
       "LT(3,KC_TAB)",
       "LT(2,KC_ENT)",
       "KC_LSFT",
-      "LGUI_T(KC_ESC)"
+      "LGUI_T(KC_BSPC)"
     ],
     [
       "KC_NO",
@@ -156,7 +156,7 @@
       "KC_NO",
       "SGUI_T(KC_ENT)",
       "KC_LSFT",
-      "KC_RGUI"
+      "LGUI_T(KC_BSPC)"
     ]
   ],
   "author": "thomas.haukland@gmail.com"
