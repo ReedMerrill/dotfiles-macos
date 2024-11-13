@@ -37,12 +37,12 @@
       "KC_COMM",
       "KC_DOT",
       "KC_SLSH",
-      "LGUI_T(KC_BSPC)",
-      "LT(1,KC_SPC)",
-      "LT(3,KC_TAB)",
+      "LGUI_T(KC_ESC)",
+      "LT(3,KC_SPC)",
+      "LT(1,KC_TAB)",
       "LT(2,KC_ENT)",
       "KC_LSFT",
-      "LGUI_T(KC_ESC)"
+      "LGUI_T(KC_BSPC)"
     ],
     [
       "KC_NO",
