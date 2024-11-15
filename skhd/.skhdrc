@@ -7,8 +7,8 @@ cmd - h : yabai -m window --focus west
 cmd - j : yabai -m window --focus south
 cmd - k : yabai -m window --focus north
 cmd - l : yabai -m window --focus east
-shift + cmd - j : yabai -m window --focus stack.prev
-shift + cmd - k : yabai -m window --focus stack.next
+# shift + cmd - j : yabai -m window --focus stack.prev
+# shift + cmd - k : yabai -m window --focus stack.next
 
 # swap window
 shift + alt - x : yabai -m window --swap recent
@@ -16,6 +16,9 @@ shift + alt - h : yabai -m window --swap west
 shift + alt - j : yabai -m window --swap south
 shift + alt - k : yabai -m window --swap north
 shift + alt - l : yabai -m window --swap east
+
+# mission control
+alt - k : yabai -m space --toggle mission-control
 
 # move window
 shift + cmd - h : yabai -m window --warp west
@@ -54,11 +57,11 @@ cmd + alt - w : yabai -m space --focus prev && yabai -m space recent --destroy
 # cmd - x : yabai -m space --focus recent
 # cmd - z : yabai -m space --focus prev || skhd -k "ctrl + alt + cmd - z"
 # cmd - c : yabai -m space --focus next || skhd -k "ctrl + alt + cmd - c"
-cmd - 6 : yabai -m space --focus  1 || skhd -k "ctrl + alt + cmd - 1"
-cmd - 7 : yabai -m space --focus  2 || skhd -k "ctrl + alt + cmd - 2"
-cmd - 8 : yabai -m space --focus  3 || skhd -k "ctrl + alt + cmd - 3"
-cmd - 9 : yabai -m space --focus  4 || skhd -k "ctrl + alt + cmd - 4"
-cmd - 0 : yabai -m space --focus  5 || skhd -k "ctrl + alt + cmd - 5"
+cmd - 6 : yabai -m space --focus  1
+cmd - 7 : yabai -m space --focus  2
+cmd - 8 : yabai -m space --focus  3
+cmd - 9 : yabai -m space --focus  4
+cmd - 0 : yabai -m space --focus  5
 
 # send window to desktop and follow focus
 shift + cmd - x : yabai -m window --space recent && yabai -m space --focus recent
@@ -156,5 +159,3 @@ ctrl + alt - s : yabai -m space --layout $(yabai -m query --spaces --space | jq 
 # minimize
 cmd - m : yabai -m window --minimize
 
-# mission control
-cmd - k : yabai -m space --toggle mission-control
